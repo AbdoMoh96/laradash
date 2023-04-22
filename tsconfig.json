@@ -16,6 +16,6 @@
         "noEmit": true,
         "jsx": "react-jsx"
     },
-    "include": ["resources/React/Pages"],
-    "exclude": ["node_modules"]
+    "include": ["resources/**/*.+(js|jsx|ts|tsx)"],
+    "references": [{ "path": "./tsconfig.node.json" }]
 }

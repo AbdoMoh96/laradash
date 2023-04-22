@@ -8,6 +8,10 @@ export default defineConfig({
             input: ['resources/React/app.tsx'],
             refresh: true,
         }),
-       eslintPlugin(),
+       eslintPlugin({
+           include: 'resources/React/**/*.+(js|jsx|ts|tsx)',
+           failOnError : false,
+           failOnWarning : false
+       }),
     ],
 });

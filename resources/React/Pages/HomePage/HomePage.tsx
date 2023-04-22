@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 interface propTypes {}
 
@@ -10,7 +10,7 @@ const HomePage : React.FunctionComponent<propTypes> = () => {
                 welcome to dashboard home page
             </h1>
         </div>
-    )
-}
+    );
+};
 
-export default HomePage
+export default HomePage;
