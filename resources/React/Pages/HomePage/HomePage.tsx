@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 interface propTypes {}
 
@@ -13,4 +13,4 @@ const HomePage : React.FunctionComponent<propTypes> = () => {
     )
 }
 
-export default HomePage;
+export default HomePage

@@ -17,4 +17,5 @@
         "jsx": "react-jsx"
     },
     "include": ["resources/React/Pages"],
+    "exclude": ["node_modules"]
 }
