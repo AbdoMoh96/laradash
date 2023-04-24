@@ -1,0 +1,52 @@
+/* Reset all styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Remove list styles */
+ul, ol {
+    list-style: none;
+}
+
+/* Remove anchor styles */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Remove form styles */
+button, input, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+/* Remove table styles */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Remove image styles */
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Remove media styles */
+audio, video {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Remove default styles on certain elements */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+    display: block;
+}

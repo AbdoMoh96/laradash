@@ -1,4 +1,5 @@
-import React from 'react';
+import React,{useState} from 'react';
+import './Assets/Sass/index.scss';
 
 interface propTypes {
     children : JSX.Element
@@ -6,17 +7,23 @@ interface propTypes {
 
 const Layout : React.FunctionComponent<propTypes> = ({ children }) : JSX.Element => {
 
+    const [sideMenuState, setSideMenuState] = useState<boolean>(false);
+
+    const handelSideMenuStateChange = () => {
+        setSideMenuState(!sideMenuState);
+    };
+
     return(
         <main>
-            <nav className='top_nav'>
-                <img width={50} src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928&q=80" alt=""/>
+            <aside className={`side_bar ${sideMenuState ? 'side_bar_show' : ''}`}>
+               <h1 style={{color: "white", width: "10vw"}}>Lorem ipsum dolor sit amet, consectetur adipisicin</h1>
+            </aside>
 
-                <button type='button'>logout</button>
-            </nav>
+            <section className={`content_wrapper ${sideMenuState ? 'content_wrapper_shrink' : ''}`}>
+                <nav className='top_nav'>
+                    <img className='user_img' src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928&q=80" alt=""/>
 
-            <section className='content_wrapper'>
-                <nav className='sideNav'>
-
+                    <button type='button' onClick={() => handelSideMenuStateChange()}>side menu</button>
                 </nav>
 
                 <section className='main_content'>
